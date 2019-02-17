@@ -1,3 +1,4 @@
+const {countryCode} = require("./common")
 function getRandomNum(length) {
     var randomNum = 
         (Math.pow(10,length).toString().slice(length-1) + 
@@ -13,19 +14,23 @@ const randomize = ()=>{
     return numbers;
 }
 
-numbers = randomize().map(num=>num.toString()).map(num=>{
-    console.log(num.charAt(0))
+const random = (code)=> randomize().map(num=>num.toString()).map(num=>{
+    const {dial_code}  = countryCode(code)
     if(num.charAt(0) !== "0" ){
         num = num.substr(0,num.length-1)
-        return "0"+num
+        console.log("the stuff doesn't start with 0 ",)
+        return `(${dial_code}) `+num
     }else if(num.charAt(0) === "0" && num.charAt(1) === "0"  ) {
-        num = num.substr(1) + getRandomNum(1)
-        return num
+        num = num.substr(1,2) + getRandomNum(1)
+        return `${dial_code} ` + num
     }else{
-        return num
+
+        num = num.substr(1) + getRandomNum(1)
+        console.log("the number correct", num)
+        return `(${dial_code}) `+num
     }
     
 })
 
 
-module.exports = numbers
+module.exports = random
