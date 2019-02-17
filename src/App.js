@@ -3,10 +3,23 @@ import './App.css';
 import NavBar from './components/NavBar';
 import NumberList from './components/NumberList'
 import { Grid } from 'semantic-ui-react';
+import GenerateButton from "./components/GenerateButton"
+
 const randomNumbers = require("./helpers/csv.js")
 
 class App extends Component {
+  constructor(params) {
+    super(params)
+    this.state = {
+      numbers: randomNumbers('ke'),
+    }
+  }
+
+  generate = (code)=>{
+    this.setState({numbers:randomNumbers(code.toUpperCase())})
+  }
   render() {
+    const {numbers} = this.state
     return (
       <Grid centered columns={2}>
       <Grid.Column>
@@ -14,8 +27,8 @@ class App extends Component {
          <NavBar/>
         </header>
         <section>
-          <NumberList  numbers={randomNumbers} />
-          
+        <GenerateButton onGenerate={this.generate}/>
+          <NumberList  numbers={numbers} />
         </section>
       </Grid.Column>
        
