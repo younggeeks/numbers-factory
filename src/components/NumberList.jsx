@@ -14,7 +14,7 @@ const NumberList = ({numbers}) => (
     <Table.Body>
         {
             numbers.map((num,index)=>
-            <Table.Row>
+            <Table.Row key={index}>
                 <Table.Cell>{index + 1}</Table.Cell>
                 <Table.Cell>{num}</Table.Cell>
               </Table.Row>)
