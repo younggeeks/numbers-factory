@@ -2,7 +2,7 @@
 const randomize = (done)=>{
     let numbers = []
     for (let i = 0; i < 10000; i++) {
-      let low = 9848
+      let low = 764884847
       let high =928374747
       numbers.push(Math.floor(Math.random() * (high - low + 1)) + low)
     }
