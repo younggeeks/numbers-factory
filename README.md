@@ -1,5 +1,8 @@
 [![CircleCI](https://circleci.com/gh/younggeeks/numbers-factory.svg?style=svg)](https://circleci.com/gh/younggeeks/numbers-factory) <a href="https://codeclimate.com/github/younggeeks/numbers-factory/test_coverage"><img src="https://api.codeclimate.com/v1/badges/36b992e3d85940e82658/test_coverage" /></a>
 
+
+##  LIVE VERSION https://tranquil-meadow-51552.herokuapp.com/
+
 ### Run the project
 ### `npm start`
 
