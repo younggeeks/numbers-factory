@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import {create} from 'react-test-renderer';
+import NumberList from './components/NumberList';
 it('renders without crashing', () => {
   const div = document.createElement('div');
   ReactDOM.render(<App />, div);
@@ -46,4 +47,3 @@ it('Changes direction when sort is called', () => {
   instance.sort()
   expect(instance.state.direction).toEqual("descending")
 });
-

@@ -30,7 +30,6 @@ export default class NumberList extends Component {
               numbers.map((num,index)=>
               <Table.Row key={index}>
                   <Table.Cell>{index + 1}</Table.Cell>
-                  {/* <Table.Cell>{`0${random(7,9)}${num}`}</Table.Cell> */}
                   <Table.Cell>{`0${num}`}</Table.Cell>
                 </Table.Row>)
           }

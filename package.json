@@ -30,5 +30,13 @@
   ],
   "devDependencies": {
     "react-test-renderer": "^16.8.3"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!<rootDir>/path/to/dir/",
+      "!<rootDir>/src/index.js"
+    ]
   }
 }
