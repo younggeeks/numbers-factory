@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Dropdown } from "semantic-ui-react";
+import { Button, Dropdown, Loader } from "semantic-ui-react";
 import { countryOptions } from "../helpers/common.js";
 
 class GenerateButton extends React.Component {
@@ -18,6 +18,7 @@ class GenerateButton extends React.Component {
     const {onGenerate} = this.props;
     return (
       <div>
+         
         <Dropdown
           onChange={this.handleChange}
           value={value}
